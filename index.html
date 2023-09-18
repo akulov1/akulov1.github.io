@@ -11,6 +11,7 @@
     <header>
       <img src="logo.jpg" alt="Логотип" />
       <a href="http://kubsu.ru/">Главная страница сайта КубГУ</a>
+      <a href="/">Сокращенная ссылка на главную страницу</a>
       <h1>Название</h1>
     </header>
 
@@ -18,11 +19,11 @@
       <h2>Маркированный список ссылок</h2>
       <ul>
         <li><a href="http://kubsu.ru/">Главная страница сайта КубГУ</a></li>
-        <li><a href="https://kubsu.ru/#page">Главная страница сайта КубГУ в протоколе https</a></li>
+        <li><a href="https://kubsu.ru/">Главная страница сайта КубГУ в протоколе https</a></li>
         <li><a href="./image.jpg"><img src="image.jpg" alt="Ссылка-изображение" style="width: 400px;"></a></li>
         <li><a href="/inner/inner.html">Сокращенная ссылка на внутреннюю страницу</a></li>
         <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
-        <li><a href="#page">Ссылка на фрагмент текущей страницы</a></li>
+        <li><a href="#forma">Ссылка на фрагмент текущей страницы</a></li>
         <li><a href="index.html?param1=value1&param2=value2&param3=value3">Ссылка с тремя параметрами в URL</a></li>
         <li><a href="index.html?id=123">Ссылка с параметром id в URL</a></li>
         <li><a href="./index.html">Относительная ссылка в текущем каталоге</a></li>
@@ -56,39 +57,39 @@
       </ul>
 
 
-      <h2>Форма</h2>
+      <h2 id="forma">Форма</h2>
       <form action="/" method="POST">
 
         <label>
           ФИО:<br />
-          <input name="field-name" placeholder="Введите ФИО" />
+          <input name="field-name" placeholder="Введите ФИО" required/>
         </label><br />
 
         <label>
           Телефон:<br />
-          <input name="field-phone" type="tel" placeholder="Введите ваш телефон" />
+          <input name="field-phone" type="tel" placeholder="Введите ваш телефон" required/>
         </label><br />
 
         <label>
           Email:<br />
-          <input name="field-email" type="email" placeholder="Введите вашу почту" />
+          <input name="field-email" type="email" placeholder="Введите вашу почту" required/>
         </label><br />
 
         <label>
           Дата рождения:<br />
-          <input name="field-bday" value="2019-08-13" type="date" />
+          <input name="field-bday" type="date" required/>
         </label><br />
 
         Пол:<br />
         <label><input type="radio" name="radio-group-1" value="мужской" />
           Мужской</label>
-        <label><input type="radio" name="radio-group-1" value="женский" />
+        <label><input type="radio" name="radio-group-1" value="женский" required/>
           Женский</label><br />
 
         <label>
           Выберите любимый язык программирования:
           <br />
-          <select name="field-proglang" multiple="multiple">
+          <select name="field-proglang" multiple="multiple" required>
             <option value="pascal">Pascal</option>
             <option value="c">C</option>
             <option value="c++">C++</option>
@@ -105,15 +106,14 @@
 
         <label>
           Биография:<br />
-          <textarea name="field-name-2" placeholder="Введите вашу биографию"></textarea>
+          <textarea name="field-name-2" placeholder="Введите вашу биографию" required></textarea>
         </label><br />
 
-        <label><input type="checkbox" name="check-1" />
+        <label><input type="checkbox" name="check-1" required/>
           С контрактом ознакомлен(а)</label><br />
 
         <input type="submit" value="Сохранить" />
       </form>
-
 
 
       <table>
@@ -166,7 +166,7 @@
       </table>
     </nav>
     <footer>
-      (c) Акулов
+      (c) Акулов Артём
     </footer>
 
   </body>
