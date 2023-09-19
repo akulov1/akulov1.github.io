@@ -15,7 +15,7 @@ header img {
 header a{
     background-color:#ddd;
     padding:10px;
-    text-align: right;
+    float: right;
 }
 
 nav {
