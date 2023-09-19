@@ -3,6 +3,7 @@ header {
     background-color:#ccc;
     padding: 10px;
     height:120px;
+
 }
 
 header img {
@@ -15,7 +16,7 @@ header img {
 header a{
     background-color:#ddd;
     padding:10px;
-    text-align: right;
+    float: right;
 }
 
 nav {
