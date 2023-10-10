@@ -7,6 +7,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function() {
+            var quantityInput = document.getElementById("quantity");
+            var productSelect = document.getElementById("product");
+            var calculateButton = document.getElementById("calculate");
+            var resultOutput = document.getElementById("result");
+
+            calculateButton.addEventListener("click", function() {
+                var quantity = parseInt(quantityInput.value);
+                var price = parseInt(productSelect.value);
+                var total = quantity * price;
+                resultOutput.textContent = "Стоимость заказа: " + total + " руб.";
+            });
+        });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Задание 1</title>
@@ -178,6 +193,22 @@
 
             <input type="submit" value="Сохранить"/>
         </form>
+        <div class="order-4" id="calc">
+            <h1>Калькулятор стоимости заказа</h1>
+            <form>
+                <label for="quantity">Количество товара:</label>
+                <input type="number" id="quantity" min="1" required><br><br>
+                <label for="product">Выберите товар:</label>
+                <select id="product">
+                    <option value="100">Товар 1 (100 руб.)</option>
+                    <option value="200">Товар 2 (200 руб.)</option>
+                    <option value="300">Товар 3 (300 руб.)</option>
+                </select><br><br>
+                <button type="button" id="calculate">Подсчитать стоимость</button>
+            </form>
+            <div id="result"></div>
+        </div>
+        
     </nav>
     <footer class="container-fluid bg-light p-5">
         (c) Артём Акулов
