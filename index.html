@@ -8,7 +8,7 @@
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script defer>
-        document.addEventListener("DOMContentLoaded", function() {
+         document.addEventListener("DOMContentLoaded", function() {
             var quantityInput = document.getElementById("quantity");
             var productSelect = document.getElementById("product");
             var calculateButton = document.getElementById("calculate");
@@ -17,8 +17,18 @@
             calculateButton.addEventListener("click", function() {
                 var quantity = parseInt(quantityInput.value);
                 var price = parseInt(productSelect.value);
-                var total = quantity * price;
-                resultOutput.textContent = "Стоимость заказа: " + total + " руб.";
+                var total = price*quantity;
+                if(!isNaN(total)){
+                    if(quantity<0 || price<0 || isNaN(quantity)){
+                        resultOutput.textContent = "Стоимость заказа: 0 руб.";
+                    }
+                    else{
+                        resultOutput.textContent = "Стоимость заказа: " + total + " руб.";
+                    }
+                }
+                else{
+                    resultOutput.textContent = "Стоимость заказа: 0 руб.";
+                }
             });
         });
         document.getElementById("calculatorForm").addEventListener("submit", function(event) {
