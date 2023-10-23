@@ -32,31 +32,6 @@
                 }
             });
         });
-        document.getElementById("calculatorForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Отменить отправку формы
-            // Получить значения элементов формы
-            var quantity = parseInt(document.getElementById("quantity").value);
-            var type = document.querySelector('input[name="type"]:checked').value;
-            var option = document.getElementById("option").value;
-            var property = document.getElementById("property").checked;
-            // Выполнить расчет стоимости товара
-            var price = calculatePrice(quantity, type, option, property);
-            // Вывести результат на страницу
-            document.getElementById("result").textContent = "Цена товара: " + price + " руб.";
-        });
-        function calculatePrice(quantity, type, option, property) {
-            var basePrice = 100; // Базовая цена товара
-            if (type === "type1") {
-                // Тип 1 товара не имеет дополнительных опций и свойств
-                return basePrice * quantity;
-            } else if (type === "type2") {
-                var optionPrice = 50;
-                return (basePrice + optionPrice) * quantity;
-            } else if (type === "type3") {
-                var propertyPrice = 30; // Цена свойства
-                return (basePrice + propertyPrice) * quantity;
-            }
-        }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Задание 1</title>
