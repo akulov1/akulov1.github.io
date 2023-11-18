@@ -1,0 +1,30 @@
+.form-popup.open
+{
+    opacity: 1;
+    visibility: visible;
+}
+.form-popup.open>form
+{
+    transform: scale(1);
+}
+.form-popup
+{
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    height: 70%;
+    width: 30%;
+    display: grid;
+    align-items: center;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+    background-color: sandybrown;
+
+}
+
+@media screen and (min-width: 758px) {
+    .header-nav {
+        font-size: 24px;
+        border: none;
+    }
+}
