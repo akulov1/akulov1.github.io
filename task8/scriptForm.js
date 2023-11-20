@@ -71,7 +71,7 @@ window.addEventListener('DOMContentLoaded', function(event)
 
     document.getElementById("form-submit-button").addEventListener("click", function(){
         if(check.value ==false) return;
-        fetch("https://formcarry.com/s/b_pRIT1yrl",
+        fetch("https://formcarry.com/s/EHtMLew1to",
             {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json','Accept': 'application/json'},
